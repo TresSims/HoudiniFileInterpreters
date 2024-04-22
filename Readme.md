@@ -52,7 +52,7 @@ You have the choice to use either Houdini's built in volumes or VDB's
 automatically try to install it. (Note: If installed this way, you will need to restart
 your houdini instance to use the library)
 
-### Usagge
+### Usage
 
 1. Search for the `Read_NRRD` sop node from the tab menu in your geometry node inside of
 houdini.
