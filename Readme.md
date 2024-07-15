@@ -48,15 +48,22 @@ You have the choice to use either Houdini's built in volumes or VDB's
 
 1. Copy the `sop_ReadNRRD.hda` from the `otls` folder to an `otls` folder on your
 `$HOUDINI_PATH`
-1. Optional: Install pynrrd to your houdini environment. If not found, the module will
-automatically try to install it. (Note: If installed this way, you will need to restart
-your houdini instance to use the library)
+2. Install pynrrd to your houdini environment:
+
+Option 1:  By default, the node will install the `pynrrd` package using pip from within the module itself. To do this:
+   - create a new `Read_NRRD` node
+   - Try to import a volume, it should faile with a message saying `nrrd` not found.
+   - Restart Houdini, and everything should be working. 
+  
+  
+Option 2. Alternatively you can install nrrd manually to your Houdinig Python environment.
+   - run `hython -m pip install pynrrd` from a command line to use pip to install the `pynrrd` package
 
 ### Usage
 
 1. Search for the `Read_NRRD` sop node from the tab menu in your geometry node inside of
 houdini.
-1. Select the type of volume you wish to create, VDB or NRRD
+1. Select the type of volume you wish to create, VDB or Houdini Volume
 
 (Note: many medical datasets use value ranges outside of what houdini represents by defauly,
 if you have issues with the appearence of your volume after importing it, try adjusting
